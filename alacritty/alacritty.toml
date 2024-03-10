@@ -10,6 +10,7 @@ style = "Regular"
 [window]
 decorations = "Full"
 startup_mode = "Windowed"
+option_as_alt = "OnlyLeft"
 
 [window.padding]
 x = 5
