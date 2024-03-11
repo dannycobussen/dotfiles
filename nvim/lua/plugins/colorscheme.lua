@@ -12,5 +12,5 @@ return {
 
     vim.opt.background = "dark"
     vim.cmd([[colorscheme gruvbox]])
-  end
-} 
+  end,
+}

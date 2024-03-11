@@ -7,5 +7,6 @@ return {
   },
   opts = {
     ensure_installed = { "stylua", "prettier", "prettierd", "eslint_d" },
-  }
+    automatic_installation = false,
+  },
 }

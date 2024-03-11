@@ -9,7 +9,7 @@ vim.opt.termguicolors = true
 vim.opt.mouse = "a"
 
 -- line numbers
-vim.opt.number  = true
+vim.opt.number = true
 vim.opt.rnu = true
 vim.opt.signcolumn = "yes"
 vim.opt.wrap = true
