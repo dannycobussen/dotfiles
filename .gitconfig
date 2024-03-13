@@ -1,0 +1,17 @@
+[user]
+  signingkey = ~/.ssh/id_ed25519.pub
+
+[alias]
+  logs = log --pretty=oneline -n 20 --graph --abbrev-commit
+  branches = branch -a
+  tags = tag -l
+
+[core]
+  editor = nvim
+  ignorecase = false 
+
+[gpg]
+  format = ssh
+
+[commit]
+  gpgsign = true

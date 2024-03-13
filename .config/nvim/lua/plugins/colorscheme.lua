@@ -8,9 +8,17 @@ return {
         SignColumn = { bg = "none" },
       },
       contrast = "soft",
+      bold = false,
     })
 
     vim.opt.background = "dark"
     vim.cmd([[colorscheme gruvbox]])
   end,
 }
+
+-- return {
+--   "savq/melange-nvim",
+--   config = function()
+--     vim.cmd([[colorscheme melange]])
+--   end,
+-- }
