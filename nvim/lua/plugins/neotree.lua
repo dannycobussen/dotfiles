@@ -17,5 +17,6 @@ return {
     require("neo-tree").setup(opts)
 
     vim.keymap.set("n", "<C-b>", ":Neotree filesystem toggle reveal left<CR>", {})
+    vim.keymap.set("n", "<A-b>", ":Neotree buffers toggle reveal left<CR>", {})
   end,
 }

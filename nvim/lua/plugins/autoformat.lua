@@ -22,6 +22,7 @@ return {
       javascript = { { "prettierd", "prettier" } },
       typescriptreact = { { "prettierd", "prettier" } },
       typescript = { { "prettierd", "prettier" } },
+      json = { "prettierd" },
     },
     formatters = {
       stylua = {

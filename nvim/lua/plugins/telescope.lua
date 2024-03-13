@@ -6,7 +6,22 @@ return {
     { "nvim-telescope/telescope-ui-select.nvim" },
   },
   config = function()
+    local actions = require("telescope.actions")
     require("telescope").setup({
+      defaults = {
+        mappings = {
+          i = {
+            ["<Esc>"] = actions.close,
+          },
+        },
+        preview = {
+          filesize_limit = 0.2, -- MB
+        },
+        file_ignore_patterns = {
+          "node_modules",
+          "%.svg",
+        },
+      },
       extensions = {
         ["ui-select"] = {
           require("telescope.themes").get_dropdown(),

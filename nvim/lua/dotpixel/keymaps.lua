@@ -30,7 +30,8 @@ vim.keymap.set("v", "<", "<gv", defaultOpts({ desc = "Indent and keep visual" })
 
 -- lazy
 vim.keymap.set("n", "<Leader>l", "<Cmd>Lazy<cr>", { desc = "Lazy" })
-vim.keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR>")
+vim.keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR>", { silent = false, desc = "Escape and remove highlighted search" })
+vim.keymap.set("i", "<C-c>", "<Esc><Esc>", { desc = "Map ctrl+c to Esc" })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
