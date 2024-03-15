@@ -7,7 +7,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     opts = {
       automatic_installation = true,
-      ensure_installed = { "lua_ls", "tsserver", "tailwindcss" },
+      ensure_installed = { "lua_ls", "tsserver", "tailwindcss", "eslint" },
     },
   },
   { "j-hui/fidget.nvim", opts = {} },
@@ -35,8 +35,8 @@ return {
         },
       })
 
+      lspconfig.eslint.setup({ capabilities = capabilities })
       lspconfig.tsserver.setup({ capabilities = capabilities })
-
       lspconfig.tailwindcss.setup({ capabilities = capabilities })
     end,
   },
