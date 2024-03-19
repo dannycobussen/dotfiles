@@ -6,7 +6,7 @@ return {
     "nvimtools/none-ls.nvim",
   },
   opts = {
-    ensure_installed = { "stylua", "prettier", "prettierd", "eslint_d" },
+    ensure_installed = { "stylua", "prettier", "prettierd" },
     automatic_installation = true,
   },
 }

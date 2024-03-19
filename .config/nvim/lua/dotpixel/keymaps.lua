@@ -13,6 +13,7 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", defaultOpts({ desc = "Go to left window" 
 vim.keymap.set("n", "<C-l>", "<C-w>l", defaultOpts({ desc = "Go to right window" }))
 vim.keymap.set("n", "<C-j>", "<C-w>j", defaultOpts({ desc = "Go to lower window" }))
 vim.keymap.set("n", "<C-k>", "<C-w>k", defaultOpts({ desc = "Go to upper window" }))
+vim.keymap.set("n", "<C-tab>", "<C-6>", defaultOpts({ desc = "Switch to previous buffer" }))
 
 -- Line movement
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", defaultOpts({ desc = "Move up in normal" }))
@@ -31,7 +32,7 @@ vim.keymap.set("v", "<", "<gv", defaultOpts({ desc = "Indent and keep visual" })
 -- lazy
 vim.keymap.set("n", "<Leader>l", "<Cmd>Lazy<cr>", { desc = "Lazy" })
 vim.keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR>", { silent = false, desc = "Escape and remove highlighted search" })
-vim.keymap.set("i", "<C-c>", "<Esc><Esc>", { desc = "Map ctrl+c to Esc" })
+vim.keymap.set({ "i", "n" }, "<C-c>", "<Esc><Esc>", { desc = "Map ctrl+c to Esc", remap = true })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
