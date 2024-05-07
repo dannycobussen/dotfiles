@@ -121,3 +121,6 @@ esac
 # pnpm end
 
 PATH=~/.console-ninja/.bin:$PATH
+
+# bun completions
+[ -s "/Users/danny/.bun/_bun" ] && source "/Users/danny/.bun/_bun"
