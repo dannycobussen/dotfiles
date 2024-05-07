@@ -7,7 +7,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     opts = {
       automatic_installation = true,
-      ensure_installed = { "lua_ls", "tsserver", "tailwindcss", "eslint" },
+      ensure_installed = { "lua_ls", "tsserver", "tailwindcss", "eslint", "twiggy_language_server" },
     },
   },
   { "j-hui/fidget.nvim", opts = {} },
@@ -44,6 +44,7 @@ return {
       lspconfig.tsserver.setup({ capabilities = capabilities })
       lspconfig.tailwindcss.setup({ capabilities = capabilities })
       lspconfig.intelephense.setup({ capabilities = capabilities })
+      lspconfig.twiggy_language_server.setup({ capabilities = capabilities })
     end,
   },
 }
