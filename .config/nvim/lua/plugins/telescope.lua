@@ -22,6 +22,11 @@ return {
           "%.svg",
         },
       },
+      pickers = {
+        find_files = {
+          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+        },
+      },
       extensions = {
         ["ui-select"] = {
           require("telescope.themes").get_dropdown(),
@@ -39,12 +44,12 @@ return {
     vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Open file help tags" })
 
     -- Slightly advanced example of overriding default behavior and theme
-    -- vim.keymap.set("n", "<leader>/", function()
-    -- 	-- You can pass additional configuration to telescope to change theme, layout, etc.
-    -- 	builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-    -- 		winblend = 10,
-    -- 		previewer = false,
-    -- 	}))
-    -- end, { desc = "[/] Fuzzily search in current buffer" })
+    vim.keymap.set("n", "<leader>/", function()
+      -- You can pass additional configuration to telescope to change theme, layout, etc.
+      builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+        winblend = 10,
+        previewer = false,
+      }))
+    end, { desc = "[/] Fuzzily search in current buffer" })
   end,
 }
