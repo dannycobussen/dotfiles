@@ -1,0 +1,18 @@
+import = ["~/.config/alacritty/themes/themes/base16-gruvbox-dark-soft.toml"]
+
+[font]
+size = 25
+
+[font.normal]
+family = "UbuntuMono Nerd Font Mono"
+style = "Regular"
+
+[window]
+decorations = "Full"
+startup_mode = "Windowed"
+option_as_alt = "OnlyLeft"
+
+[window.padding]
+x = 5
+y = 5
+
