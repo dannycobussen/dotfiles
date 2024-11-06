@@ -42,5 +42,5 @@ set("n", "<leader>fh", builtin.help_tags, { desc = "Open help tags window" })
 set("n", "<leader>fk", builtin.keymaps, { desc = "Open current keymap?" })
 
 set("n", "<leader>/", function()
-  builtin.current_buffer_fuzzy_find(require("telescope.themes").get_ivy({ winblend = 10, previewer = false }))
+  builtin.current_buffer_fuzzy_find(require("telescope.themes").get_ivy({ winblend = 5, previewer = false }))
 end, { desc = "Fuzzy search in current buffer" })

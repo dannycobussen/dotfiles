@@ -7,14 +7,17 @@ vim.g.base16_colorspace = 256
 local opt = vim.opt
 
 -- general
+opt.showmode = false
 opt.inccommand = "split"
 opt.smartcase = true
 opt.ignorecase = true
 opt.termguicolors = true
 opt.wrap = true
 opt.cursorline = true
+opt.mouse = "a"
+opt.autowrite = true
 
--- line numbers 
+-- line numbers
 opt.number = true
 opt.relativenumber = true
 opt.signcolumn = "yes"

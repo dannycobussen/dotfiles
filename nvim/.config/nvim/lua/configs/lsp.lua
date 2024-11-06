@@ -25,6 +25,12 @@ local servers = {
   stylua = {},
   vimls = {},
   prettierd = {},
+
+  tsserver = {},
+  tailwindcss = {},
+  intelephense = {},
+  twiggy_language_server = {},
+  ansiblels = {},
 }
 
 require("mason").setup()

@@ -121,6 +121,10 @@ esac
 # pnpm end
 
 PATH=~/.console-ninja/.bin:$PATH
+PATH=~/.local/goodies/.bin:$PATH
 
 # bun completions
 [ -s "/Users/danny/.bun/_bun" ] && source "/Users/danny/.bun/_bun"
+
+# Fuzzy finder
+source <(fzf --zsh)
