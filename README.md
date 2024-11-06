@@ -15,5 +15,5 @@ The `--dot` makes sure all files and folders prefixed with `dot-` will be replac
 ## Remove
 
 ```sh
-stow -D nvim zsh alacritty goodies git
+stow -D nvim zsh alacritty goodies git -t ~ --dot
 ```
