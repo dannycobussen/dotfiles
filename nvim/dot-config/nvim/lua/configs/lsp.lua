@@ -26,7 +26,7 @@ local servers = {
   vimls = {},
   prettierd = {},
 
-  tsserver = {},
+  ts_ls = {},
   tailwindcss = {},
   intelephense = {},
   twiggy_language_server = {},
