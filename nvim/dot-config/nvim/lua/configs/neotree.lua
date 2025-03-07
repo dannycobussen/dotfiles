@@ -22,3 +22,4 @@ require("neo-tree").setup(opts)
 local set = vim.keymap.set
 
 set("n", "<C-b>", "<Cmd>Neotree filesystem toggle<CR>")
+set("n", "<leader>gs", "<Cmd>Neotree git_status bottom<CR>")

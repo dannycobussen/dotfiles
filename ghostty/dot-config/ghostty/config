@@ -2,7 +2,7 @@ theme = "GruvboxDark"
 
 font-family = "UbuntuMono Nerd Font Mono"
 font-style = "Bold"
-font-size = 25
+font-size = 26
 
 auto-update = download
 
@@ -10,3 +10,5 @@ window-padding-x = 5
 window-padding-y = 5
 
 keybind = cmd+k=clear_screen
+
+macos-option-as-alt = left
