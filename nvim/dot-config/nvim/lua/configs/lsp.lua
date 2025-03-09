@@ -31,6 +31,9 @@ local servers = {
   intelephense = {},
   twiggy_language_server = {},
   ansiblels = {},
+  elixirls = {
+    cmd = { "/Users/danny/.local/share/nvim/mason/bin/elixir-ls" },
+  },
 }
 
 require("mason").setup()
