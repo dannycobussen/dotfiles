@@ -1,4 +1,4 @@
-theme = "nordfox"
+theme = "gruvboxdark"
 
 font-family = "UbuntuMono Nerd Font Mono"
 font-style = "Bold"
@@ -6,8 +6,8 @@ font-size = 26
 
 auto-update = download
 
-window-padding-x = 5
-window-padding-y = 5
+window-padding-x = 0
+window-padding-y = 0
 
 keybind = cmd+k=clear_screen
 
