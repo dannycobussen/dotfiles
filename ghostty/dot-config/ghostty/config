@@ -1,8 +1,10 @@
-theme = "terafox"
+theme = "Everforest Dark - Hard"
 
 font-family = "UbuntuMono Nerd Font Mono"
 font-style = "Bold"
 font-size = 26
+
+link-url = true
 
 auto-update = download
 
