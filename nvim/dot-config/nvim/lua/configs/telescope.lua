@@ -1,10 +1,15 @@
 local actions = require("telescope.actions")
+local open_with_trouble = require("trouble.sources.telescope").open
 
 -- Config for telescope
 local config = {
   mappings = {
     i = {
       ["<Esc>"] = actions.close,
+      ["<C-t>"] = open_with_trouble,
+    },
+    n = {
+      ["<C-t>"] = open_with_trouble,
     },
   },
   preview = {
@@ -20,7 +25,8 @@ require("telescope").setup({
   defaults = require("telescope.themes").get_ivy(config),
   pickers = {
     find_files = {
-      find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+      hidden = true,
+      find_command = { "rg", "--files", "--hidden", "--glob", "*", "--glob", "**/.env", "--glob", "!**/.git/*" },
     },
   },
   extensions = {
