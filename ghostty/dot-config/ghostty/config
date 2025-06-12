@@ -1,8 +1,8 @@
-theme = "Everforest Dark - Hard"
+theme = "Oceanic-Next"
 
 font-family = "UbuntuMono Nerd Font Mono"
 font-style = "Bold"
-font-size = 26
+font-size = 25
 
 link-url = true
 

@@ -28,7 +28,7 @@ cmp.setup({
     end,
   },
   sources = cmp.config.sources({
-    { name = "copilot", group_index = 2 },
+    -- { name = "copilot", group_index = 2 },
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "path" },
@@ -41,3 +41,11 @@ cmp.setup({
     documentation = cmp.config.window.bordered(),
   },
 })
+
+cmp.event:on("menu_opened", function()
+  vim.b.copilot_suggestion_hidden = true
+end)
+
+cmp.event:on("menu_closed", function()
+  vim.b.copilot_suggestion_hidden = false
+end)

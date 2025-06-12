@@ -1,7 +1,7 @@
 local opts = {
   popup_border_style = "rounded",
   window = {
-    position = "bottom",
+    position = "left",
   },
   filesystem = {
     filtered_items = {

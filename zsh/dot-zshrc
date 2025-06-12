@@ -128,3 +128,6 @@ PATH=~/.local/goodies/dot-bin:$PATH
 
 # Fuzzy finder
 source <(fzf --zsh)
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

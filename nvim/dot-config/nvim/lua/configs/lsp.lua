@@ -36,16 +36,13 @@ local servers = {
   },
 }
 
+for server_name, server_config in pairs(servers) do
+  server_config.capabilities = capabilities
+  lspconfig[server_name].setup(server_config)
+end
+
 require("mason").setup()
 require("mason-tool-installer").setup({
   ensure_installed = vim.tbl_keys(servers or {}),
 })
-
-require("mason-lspconfig").setup_handlers({
-  function(server_name)
-    local server_config = servers[server_name] or {}
-
-    server_config.capabilities = capabilities
-    lspconfig[server_name].setup(server_config)
-  end,
-})
+require("mason-lspconfig").setup()
