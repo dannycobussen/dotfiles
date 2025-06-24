@@ -23,10 +23,16 @@ return {
       typescriptreact = { "prettierd", "prettier", stop_after_first = true },
       typescript = { "prettierd", "prettier", stop_after_first = true },
       json = { "prettierd" },
+      php = { "pint" },
     },
     formatters = {
       stylua = {
         prepend_args = { "--indent-type", "Spaces", "--indent-width", "2" },
+      },
+      pint = {
+        command = "./vendor/bin/pint",
+        args = { "$FILENAME" },
+        stdin = false,
       },
     },
   },
