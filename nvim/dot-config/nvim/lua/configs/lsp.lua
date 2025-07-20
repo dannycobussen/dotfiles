@@ -22,9 +22,7 @@ local servers = {
     },
   },
 
-  stylua = {},
   vimls = {},
-  prettierd = {},
 
   ts_ls = {},
   tailwindcss = {},
@@ -36,6 +34,12 @@ local servers = {
   },
 }
 
+local ensure_installed = vim.tbl_keys(servers or {})
+vim.list_extend(ensure_installed, {
+  "stylua",
+  "prettierd",
+})
+
 for server_name, server_config in pairs(servers) do
   server_config.capabilities = capabilities
   lspconfig[server_name].setup(server_config)
@@ -43,6 +47,6 @@ end
 
 require("mason").setup()
 require("mason-tool-installer").setup({
-  ensure_installed = vim.tbl_keys(servers or {}),
+  ensure_installed,
 })
 require("mason-lspconfig").setup()

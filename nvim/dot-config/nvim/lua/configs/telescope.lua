@@ -17,6 +17,7 @@ local config = {
   },
   file_ignore_patterns = {
     "node_modules",
+    "vendor",
   },
 }
 
