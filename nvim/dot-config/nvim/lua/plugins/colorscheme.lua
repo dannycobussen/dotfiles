@@ -3,8 +3,13 @@ return {
   -- "tinted-theming/tinted-vim",
   -- "EdenEast/nightfox.nvim",
   -- "neanias/everforest-nvim",
-  "AlexvZyl/nordic.nvim",
+  -- "ellisonleao/gruvbox.nvim",
+  -- "sainnhe/gruvbox-material",
   -- "rebelot/kanagawa.nvim",
+  -- "xero/miasma.nvim",
+  "AlexvZyl/nordic.nvim",
+  lazy = false,
+  priority = 1000,
   config = function()
     require("configs.colorscheme")
   end,

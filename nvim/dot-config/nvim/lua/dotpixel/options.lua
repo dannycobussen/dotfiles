@@ -1,7 +1,7 @@
 -- globals
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.g.base16_colorspace = 256
+vim.g.termguicolors = true
 
 -- options
 local opt = vim.opt

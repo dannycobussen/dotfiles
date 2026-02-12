@@ -24,6 +24,7 @@ local servers = {
 
   vimls = {},
 
+  gopls = {},
   ts_ls = {},
   tailwindcss = {},
   intelephense = {},

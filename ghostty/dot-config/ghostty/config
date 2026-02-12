@@ -1,8 +1,9 @@
-theme = "Oceanic-Next"
+# theme = "Gruvbox Dark"
+theme = "nordic"
 
 font-family = "UbuntuMono Nerd Font Mono"
 font-style = "Bold"
-font-size = 25
+font-size = 27
 
 link-url = true
 

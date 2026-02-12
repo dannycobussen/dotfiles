@@ -1,4 +1,4 @@
-PROMPT="%(?:%{%F{#b8bb26}%}%1{➜%} :%{%F{#cc241d}%}%1{➜%} ) %F{#d65d0e}%c%{$reset_color%}"
+PROMPT="%(?:%{%F{#b8bb26}%}%1{➜%} :%{%F{#cc241d}%}%1{➜%} ) %F{#d65d0e}%2~%{$reset_color%}"
 PROMPT+=' $(git_prompt_info)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{%F{#458588}%}git:(%{%B%F{#cc241d}%}"
