@@ -1,0 +1,26 @@
+[theme]
+name = "gruvbox"
+
+[keys]
+prefix = "ctrl+a"
+
+[ui]
+tab_bar_position = "bottom"
+
+[ui.toast]
+delivery = "herdr"
+
+[[keys.command]]
+key = "prefix+f"
+type = "plugin_action"
+command = "sessionizer.open"
+description = "Sessionizer - open project workspaces"
+
+[[keys.command]]
+key = "prefix+t"
+type = "popup"
+command = "exec \"${SHELL:-sh}\""
+description = "Utils - open scratch terminal"
+width = "80%"
+height = "80%"
+

@@ -24,6 +24,7 @@ return {
       typescript = { "prettierd", "prettier", stop_after_first = true },
       json = { "prettierd" },
       php = { "pint" },
+      go = { "goimports" },
     },
     formatters = {
       stylua = {

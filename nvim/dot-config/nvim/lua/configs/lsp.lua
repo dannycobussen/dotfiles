@@ -3,51 +3,64 @@ local capabilities = vim.tbl_deep_extend(
   vim.lsp.protocol.make_client_capabilities(),
   require("cmp_nvim_lsp").default_capabilities()
 )
-local lspconfig = require("lspconfig")
 
-local servers = {
-  eslint = {
-    on_attach = function(_, bufnr)
-      vim.api.nvim_create_autocmd("BufWritePre", { buffer = bufnr, command = "EslintFixAll" })
-    end,
-  },
+vim.lsp.config("*", { capabilities = capabilities })
 
-  lua_ls = {
-    settings = {
-      Lua = {
-        diagnostics = {
-          globals = { "vim" },
+vim.lsp.config("eslint", {
+  on_attach = function(_, bufnr)
+    vim.api.nvim_buf_create_user_command(bufnr, "EslintFixAll", function()
+      local client = vim.lsp.get_clients({ bufnr = bufnr, name = "eslint" })[1]
+      if not client then
+        return
+      end
+
+      client:exec_cmd({
+        command = "eslint.applyAllFixes",
+        arguments = {
+          {
+            uri = vim.uri_from_bufnr(bufnr),
+            version = vim.lsp.util.buf_versions[bufnr],
+          },
         },
+      })
+    end, {})
+
+    vim.api.nvim_create_autocmd("BufWritePre", { buffer = bufnr, command = "EslintFixAll" })
+  end,
+})
+
+vim.lsp.config("lua_ls", {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
       },
     },
   },
-
-  vimls = {},
-
-  gopls = {},
-  ts_ls = {},
-  tailwindcss = {},
-  intelephense = {},
-  twiggy_language_server = {},
-  ansiblels = {},
-  elixirls = {
-    cmd = { "/Users/danny/.local/share/nvim/mason/bin/elixir-ls" },
-  },
-}
-
-local ensure_installed = vim.tbl_keys(servers or {})
-vim.list_extend(ensure_installed, {
-  "stylua",
-  "prettierd",
 })
 
-for server_name, server_config in pairs(servers) do
-  server_config.capabilities = capabilities
-  lspconfig[server_name].setup(server_config)
-end
+vim.lsp.config("elixirls", {
+  cmd = { "/Users/danny/.local/share/nvim/mason/bin/elixir-ls" },
+})
+
+vim.lsp.enable({
+  "eslint",
+  "lua_ls",
+  "vimls",
+  "gopls",
+  "ts_ls",
+  "tailwindcss",
+  "intelephense",
+  "twiggy_language_server",
+  "ansiblels",
+  "elixirls",
+})
 
 require("mason").setup()
 require("mason-tool-installer").setup({
-  ensure_installed,
+  ensure_installed = {
+    "stylua",
+    "prettierd",
+  },
 })
 require("mason-lspconfig").setup()
