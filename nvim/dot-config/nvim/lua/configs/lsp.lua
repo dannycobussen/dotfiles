@@ -4,6 +4,15 @@ local capabilities = vim.tbl_deep_extend(
   require("cmp_nvim_lsp").default_capabilities()
 )
 
+require("mason").setup()
+require("mason-lspconfig").setup({ automatic_enable = false })
+require("mason-tool-installer").setup({
+  ensure_installed = {
+    "stylua",
+    "prettierd",
+  },
+})
+
 vim.lsp.config("*", { capabilities = capabilities })
 
 vim.lsp.config("eslint", {
@@ -40,7 +49,14 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.config("elixirls", {
-  cmd = { "/Users/danny/.local/share/nvim/mason/bin/elixir-ls" },
+  settings = {
+    elixirLS = {
+      dialyzerEnabled = false,
+      fetchDeps = false,
+      enableTestLenses = false,
+      suggestSpecs = false,
+    },
+  },
 })
 
 vim.lsp.enable({
@@ -55,12 +71,3 @@ vim.lsp.enable({
   "ansiblels",
   "elixirls",
 })
-
-require("mason").setup()
-require("mason-tool-installer").setup({
-  ensure_installed = {
-    "stylua",
-    "prettierd",
-  },
-})
-require("mason-lspconfig").setup()
