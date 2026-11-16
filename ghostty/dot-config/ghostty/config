@@ -22,9 +22,11 @@ selection-background = #665c54
 selection-foreground = #ebdbb2
 
 # font-family = "UbuntuMono Nerd Font Mono"
-font-family = "JetBrainsMonoNL NF"
+font-family = "JetBrainsMono Nerd Font Mono"
+# font-family = "FiraCode Nerd Font Mono"
+# font-family = "CommitMono"
 font-style = "Bold"
-font-size = 21
+font-size = 20
 
 link-url = true
 

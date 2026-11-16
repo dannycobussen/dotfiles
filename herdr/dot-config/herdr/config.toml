@@ -1,6 +1,8 @@
+onboarding = false
 [theme]
 name = "gruvbox"
 
+auto_switch = false
 [keys]
 prefix = "ctrl+a"
 
@@ -24,3 +26,5 @@ description = "Utils - open scratch terminal"
 width = "80%"
 height = "80%"
 
+[ui.sound]
+enabled = false
